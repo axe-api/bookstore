@@ -16,8 +16,8 @@ const config: IApplicationConfig = {
     },
     searchPath: [process.env.DB_USER || "user", "public"],
     pool: {
-      min: 2,
-      max: 10,
+      min: 10,
+      max: 50,
     },
     migrations: {
       tableName: "knex_migrations",
