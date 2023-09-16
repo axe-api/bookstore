@@ -1,4 +1,4 @@
-import { Model, HandlerTypes, IHandlerBasedTransactionConfig } from "axe-api";
+import { Model, HandlerTypes } from "axe-api";
 
 class Order extends Model {
   get fillable() {
@@ -14,11 +14,13 @@ class Order extends Model {
     };
   }
 
-  get transaction(): IHandlerBasedTransactionConfig {
-    return {
-      handler: HandlerTypes.INSERT,
-      transaction: true,
-    };
+  get transaction() {
+    return [
+      {
+        handlers: [HandlerTypes.INSERT],
+        transaction: true,
+      },
+    ];
   }
 
   book() {
