@@ -5,7 +5,11 @@ import SimpleUserPagination from "./Handlers/SimpleUserPagination";
 const onBeforeInit = async (app: Express) => {
   app.use(
     cors({
-      origin: ["http://localhost:3005", "http://localhost:3200"],
+      origin: [
+        "http://localhost:3005",
+        "http://localhost:3200",
+        "https://petstore.swagger.io",
+      ],
     })
   );
   app.get("/", (req, res) => {
