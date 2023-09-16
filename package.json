@@ -14,11 +14,13 @@
     "docker:build": "npm run build && cd build && docker build -t ozziest/bookstore:latest ."
   },
   "dependencies": {
-    "axe-api": "0.31.0",
+    "axe-api": "^1.0.0-rc15",
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "node-cache": "^5.1.2",
+    "redis": "^4.6.8"
   },
   "devDependencies": {
     "@babel/cli": "^7.20.7",
