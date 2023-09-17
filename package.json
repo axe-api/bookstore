@@ -14,7 +14,7 @@
     "docker:build": "npm run build && cd build && docker build -t ozziest/bookstore:latest ."
   },
   "dependencies": {
-    "axe-api": "^1.0.0-rc18",
+    "axe-api": "^1.0.0-rc19",
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
