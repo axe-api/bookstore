@@ -28,4 +28,11 @@ export default {
     },
   ],
   components: {},
+  // paths: {
+  //   "/api/v1/books": {
+  //     post: {
+  //       deprecated: true,
+  //     },
+  //   },
+  // },
 };
