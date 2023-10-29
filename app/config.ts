@@ -1,4 +1,4 @@
-import { IApplicationConfig } from "axe-api";
+import { CacheStrategies, IApplicationConfig } from "axe-api";
 
 const config: IApplicationConfig = {
   prefix: "api",
@@ -28,6 +28,11 @@ const config: IApplicationConfig = {
     migrations: {
       tableName: "knex_migrations",
     },
+  },
+  cache: {
+    enable: true,
+    ttl: 60 * 60,
+    invalidation: CacheStrategies.TagBased,
   },
 };
 
