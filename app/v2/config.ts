@@ -1,4 +1,4 @@
-import { IVersionConfig, QueryFeature, allow } from "axe-api";
+import { CacheStrategies, IVersionConfig, QueryFeature, allow } from "axe-api";
 
 const config: IVersionConfig = {
   transaction: [],
@@ -12,6 +12,11 @@ const config: IVersionConfig = {
       minPerPage: 5,
       maxPerPage: 100,
     },
+  },
+  cache: {
+    enable: true,
+    ttl: 60 * 60,
+    invalidation: CacheStrategies.TagBased,
   },
 };
 
