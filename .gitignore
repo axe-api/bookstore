@@ -3,3 +3,4 @@ node_modules
 *.sqlite
 build
 dump-bookstore.sql
+.DS_Store
