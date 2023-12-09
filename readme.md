@@ -25,6 +25,38 @@ scenarios: (100.00%) 1 scenario, 50 max VUs, 2m30s max duration (incl. graceful 
 
      ✓ status is 200
 
+     checks.........................: 100.00% ✓ 91514      ✗ 0
+     data_received..................: 57 MB   475 kB/s
+     data_sent......................: 3.5 MB  29 kB/s
+     http_req_blocked...............: avg=33.39µs  min=0s      med=0s      max=348.08ms p(90)=1µs     p(95)=1µs
+     http_req_connecting............: avg=10.18µs  min=0s      med=0s      max=28.71ms  p(90)=0s      p(95)=0s
+   ✓ http_req_duration..............: avg=53.27ms  min=31.09ms med=49.41ms max=2.48s    p(90)=68.39ms p(95)=79.73ms
+       { expected_response:true }...: avg=53.27ms  min=31.09ms med=49.41ms max=2.48s    p(90)=68.39ms p(95)=79.73ms
+     http_req_failed................: 0.00%   ✓ 0          ✗ 91514
+     http_req_receiving.............: avg=144.91µs min=6µs     med=30µs    max=72.61ms  p(90)=107µs   p(95)=595µs
+     http_req_sending...............: avg=38.24µs  min=7µs     med=31µs    max=7.55ms   p(90)=66µs    p(95)=85µs
+     http_req_tls_handshaking.......: avg=22.56µs  min=0s      med=0s      max=329.35ms p(90)=0s      p(95)=0s
+     http_req_waiting...............: avg=53.09ms  min=30.94ms med=49.23ms max=2.48s    p(90)=68.21ms p(95)=79.46ms
+     http_reqs......................: 91514   762.357662/s
+     iteration_duration.............: avg=53.43ms  min=31.18ms med=49.55ms max=2.48s    p(90)=68.56ms p(95)=80.11ms
+     iterations.....................: 91514   762.357662/s
+     vus............................: 26      min=2        max=50
+     vus_max........................: 50      min=50       max=50
+
+
+running (2m00.0s), 00/50 VUs, 91514 complete and 0 interrupted iterations
+default ✓ [======================================] 00/50 VUs  2m0s
+```
+
+#### `SHOW` handler without cache
+
+```bash
+scenarios: (100.00%) 1 scenario, 50 max VUs, 2m30s max duration (incl. graceful stop):
+           * default: Up to 50 looping VUs for 2m0s over 3 stages (gracefulRampDown: 30s, gracefulStop: 30s)
+
+
+     ✓ status is 200
+
      checks.........................: 100.00% ✓ 73529      ✗ 0
      data_received..................: 43 MB   357 kB/s
      data_sent......................: 2.8 MB  23 kB/s
@@ -48,11 +80,11 @@ running (2m00.1s), 00/50 VUs, 73529 complete and 0 interrupted iterations
 default ✓ [======================================] 00/50 VUs  2m0s
 ```
 
-#### `SHOW` handler without cache
+#### `SHOW` handler with cache
 
 - Axe API handles the request.
 - Fetching the same user.
-- No cache
+- Auto-cache is ON
 
 ```bash
 scenarios: (100.00%) 1 scenario, 50 max VUs, 2m30s max duration (incl. graceful stop):
