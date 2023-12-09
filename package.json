@@ -11,7 +11,10 @@
     "migrate:up": "knex --esm migrate:up",
     "test": "jest",
     "test:dev": "jest --watch",
-    "docker:build": "npm run build && cd build && docker build -t ozziest/bookstore:latest ."
+    "docker:build": "npm run build && cd build && docker build -t ozziest/bookstore:latest .",
+    "benchmark:custom": "k6 run benchmark/custom-users.js",
+    "benchmark:v1": "k6 run benchmark/v1-users.js",
+    "benchmark:v2": "k6 run benchmark/v2-users.js"
   },
   "dependencies": {
     "@elastic/elasticsearch": "^8.10.0",
