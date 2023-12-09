@@ -4,6 +4,6 @@ import { Knex } from "knex";
 
 export default async (req: Request, res: Response) => {
   const db = await IoCService.use<Knex>("Database");
-  const user = await db.table("users").where("id", 1);
+  const [user] = await db.table("users").where("id", 1);
   res.json(user);
 };
