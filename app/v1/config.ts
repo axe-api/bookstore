@@ -14,7 +14,7 @@ const config: IVersionConfig = {
     },
   },
   cache: {
-    enable: true,
+    enable: false,
     ttl: 60 * 60,
     invalidation: CacheStrategies.TagBased,
   },
