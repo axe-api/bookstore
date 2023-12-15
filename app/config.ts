@@ -1,4 +1,5 @@
 import { IApplicationConfig } from "axe-api";
+import errorHandler from "./ErrorHandler";
 
 const config: IApplicationConfig = {
   prefix: "api",
@@ -10,6 +11,7 @@ const config: IApplicationConfig = {
       target: "pino-pretty",
     },
   },
+  errorHandler,
   docs: true,
   database: {
     client: process.env.DB_CLIENT || "mysql",
