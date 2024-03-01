@@ -17,7 +17,7 @@
     "benchmark:v2": "k6 run benchmark/v2-users.js"
   },
   "dependencies": {
-    "@elastic/elasticsearch": "^8.11.0",
+    "@elastic/elasticsearch": "^8.12.2",
     "axe-api": "1.0.10",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
