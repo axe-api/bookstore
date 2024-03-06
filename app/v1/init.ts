@@ -1,8 +1,8 @@
-import { Express } from "express";
 import cors from "cors";
 import SimpleUserPagination from "./Handlers/SimpleUserPagination";
+import { App, AxeRequest, AxeResponse } from "axe-api";
 
-const onBeforeInit = async (app: Express) => {
+const onBeforeInit = async (app: App) => {
   app.use(
     cors({
       origin: [
@@ -12,7 +12,7 @@ const onBeforeInit = async (app: Express) => {
       ],
     })
   );
-  app.get("/", (req, res) => {
+  app.get("/", (req: AxeRequest, res: AxeResponse) => {
     res.json({
       name: "AXE API",
       version: "1.0.0-rc15",
@@ -20,9 +20,9 @@ const onBeforeInit = async (app: Express) => {
       documentation: "https://axe-api.com/getting-started/crud/index.html",
     });
   });
-  app.get("/express-users", SimpleUserPagination);
+  app.get("/direct-users", SimpleUserPagination);
 };
 
-const onAfterInit = async (app: Express) => {};
+const onAfterInit = async (app: App) => {};
 
 export { onBeforeInit, onAfterInit };

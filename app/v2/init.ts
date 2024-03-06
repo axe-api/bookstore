@@ -1,13 +1,13 @@
-import { Express } from "express";
 import cors from "cors";
+import { App, AxeRequest, AxeResponse } from "axe-api";
 
-const onBeforeInit = async (app: Express) => {
+const onBeforeInit = async (app: App) => {
   app.use(
     cors({
       origin: ["http://localhost:3005"],
     })
   );
-  app.get("/", (req, res) => {
+  app.get("/", (req: AxeRequest, res: AxeResponse) => {
     res.json({
       name: "AXE API",
       description: "The next generation Rest API framework.",
@@ -16,6 +16,6 @@ const onBeforeInit = async (app: Express) => {
   });
 };
 
-const onAfterInit = async (app: Express) => {};
+const onAfterInit = async (app: App) => {};
 
 export { onBeforeInit, onAfterInit };

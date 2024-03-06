@@ -1,6 +1,6 @@
 {
-  "name": "axe-api-template",
-  "version": "1.0.8",
+  "name": "bookstore-api",
+  "version": "1.0.9",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -21,10 +21,10 @@
     "axe-api": "1.1.0",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
-    "express": "^4.18.3",
     "mysql": "^2.18.1",
     "node-cache": "^5.1.2",
-    "redis": "^4.6.12"
+    "redis": "^4.6.12",
+    "robust-validator": "^1.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.9",
@@ -36,14 +36,10 @@
     "@tsconfig/recommended": "^1.0.3",
     "@types/bcrypt": "^5.0.2",
     "@types/cors": "^2.8.17",
-    "@types/express": "^4.17.21",
-    "@types/express-fileupload": "^1.4.4",
     "@types/ioredis": "^5.0.0",
     "@types/jsonwebtoken": "^9.0.5",
     "@types/multer": "^1.4.11",
     "@types/node-cron": "^3.0.11",
-    "@types/nodemailer": "^6.4.14",
-    "@types/rate-limit-redis": "^3.0.0",
     "@types/sharp": "^0.32.0",
     "@types/uuid": "^9.0.8",
     "babel-loader": "^9.1.3",
