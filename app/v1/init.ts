@@ -12,14 +12,15 @@ const onBeforeInit = async (app: App) => {
       ],
     })
   );
+
   app.get("/", (req: AxeRequest, res: AxeResponse) => {
     res.json({
       name: "AXE API",
-      version: "1.0.0-rc15",
       description: "The next generation Rest API framework.",
-      documentation: "https://axe-api.com/getting-started/crud/index.html",
+      documentation: "https://axe-api.com/learn/quick-start.html",
     });
   });
+
   app.get("/direct-users", SimpleUserPagination);
 };
 

@@ -23,7 +23,7 @@ export default {
       description: "The Next Generation Rest API Framework",
       externalDocs: {
         description: "Find out more",
-        url: "http://v1.axe-api.com",
+        url: "http://axe-api.com",
       },
     },
   ],
