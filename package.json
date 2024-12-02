@@ -23,7 +23,7 @@
     "cors": "^2.8.5",
     "mysql": "^2.18.1",
     "node-cache": "^5.1.2",
-    "redis": "^4.6.12",
+    "redis": "^4.6.14",
     "robust-validator": "^1.1.0"
   },
   "devDependencies": {
