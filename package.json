@@ -24,7 +24,7 @@
     "mysql": "^2.18.1",
     "node-cache": "^5.1.2",
     "redis": "^4.7.0",
-    "robust-validator": "^1.1.1"
+    "robust-validator": "^2.1.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.25.9",
